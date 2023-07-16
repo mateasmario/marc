@@ -7,21 +7,69 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/hello"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="Marc Alpha 1.00"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.969" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="267dp"
+        android:layout_height="92dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.379" />
+        app:layout_constraintVertical_bias="0.382"
+        app:srcCompat="@drawable/logo" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Start"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="421dp" />
+    <LinearLayout
+        android:layout_width="395dp"
+        android:layout_height="113dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.552">
+
+        <Button
+            android:id="@+id/buttonPicture"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:backgroundTint="#80B4EA"
+            android:onClick="launchCamera"
+            android:text="Take a picture"
+            android:textColor="#1E2732"
+            android:textColorHighlight="#1E2732"
+            android:textColorLink="#1E2732"
+            app:iconTint="#1E2732"
+            app:icon="@drawable/baseline_photo_camera_24"
+            app:rippleColor="#BED1E6" />
+
+        <Button
+            android:id="@+id/buttonAudio"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:backgroundTint="#80B4EA"
+            android:maxWidth="500dp"
+            android:onClick="launchMicrophone"
+            android:text="Record audio"
+            android:textColor="#1E2732"
+            android:textColorHighlight="#1E2732"
+            android:textColorLink="#1E2732"
+            app:iconTint="#1E2732"
+            app:icon="@drawable/baseline_mic_24"
+            app:rippleColor="#BED1E6" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
